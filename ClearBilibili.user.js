@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  让b站的视频观看页变得简洁
-// @author       You
+// @author       Automatic-Airz
 // @match        *://www.bilibili.com/video/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
 // @grant        none
