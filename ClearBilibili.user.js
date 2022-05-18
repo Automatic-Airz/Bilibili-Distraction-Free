@@ -25,7 +25,14 @@
         else {ad = document.querySelectorAll("#bannerAd");
         if(ad[0]!=null)ad[0].style.display="none";
         }
-    }, 6000);
+
+
+        //var end_panel = document.querySelectorAll("#bilibiliPlayer > div.bilibili-player-area.video-state-blackside.video-state-pause.video-state-ending-panel-flag.progress-shadow-show > div.bilibili-player-video-wrap > div.bilibili-player-ending-panel > div.bilibili-player-ending-panel-box.second-screen");
+        //var end_panel = document.querySelectorAll("#bilibiliPlayer > div.bilibili-player-area.video-state-blackside.video-state-pause.progress-shadow-show > div.bilibili-player-video-wrap > div.bilibili-player-video-control-wrap > div.bilibili-player-video-control > div.bilibili-player-video-progress-shadow.bui.bui-slider > div > div.bui-bar-wrap > div.bui-bar.bui-bar-normal");
+        //if(end_panel[0]!=null)console.log(1);
+        //else console.log(0);
+
+        }, 6000);
 
     setTimeout(function(){
         //下面这行查找元素要等到第二遍加载的时候再查找，b站网页加载的时候好像会先加载一遍简洁版的这个，然后再加载一个完整的
@@ -37,8 +44,19 @@
         for(var i=1;i<8;i++){
             if(Headers[0].children[i].children[0]!=null)
             {
-                //Headers[0].children[i].children[0].style.display="none";
-                Headers[0].children[i].children[0].style.visibility="hidden";
+                Headers[0].children[i].children[0].style.display="none";
+                // Headers[0].children[i].children[0].style.visibility="hidden";
+            }
+        }
+        var Headers2 = document.querySelectorAll("#biliMainHeader > div > div > ul.right-entry");
+        if(Headers2[0].children[0].children[0]!=null)
+            {
+                Headers2[0].children[0].children[0].style.display="none";}
+        for(i=1;i<8;i++){
+            if(Headers2[0].children[i].children[0]!=null)
+            {
+                Headers2[0].children[i].children[0].style.display="none";
+                //Headers2[0].children[i].children[0].style.visibility="hidden";
             }
         }
         //处理一下搜索框的推广
